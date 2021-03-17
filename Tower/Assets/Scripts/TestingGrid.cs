@@ -10,7 +10,7 @@ public class TestingGrid : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        grid = new Grid(26, 15, 1f, new Vector3(-10, -9));
+        grid = new Grid(24, 17, 1f, new Vector3(-12, -9));
     }
 
     private void Update()

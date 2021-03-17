@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall_Left
+  - Wall_down
+  - Enemy_ignore
+  - Ignore_all
+  - Gold
+  - Undefined
+  - projectile
+  - Tower
   layers:
   - Default
   - TransparentFX
@@ -13,8 +21,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Path
+  - Background
   - 
   - 
   - 
@@ -38,8 +46,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
+  - name: backgrounds
+    uniqueID: 658419387
+    locked: 0
+  - name: paths
     uniqueID: 850717781
+    locked: 0
+  - name: player
+    uniqueID: 655096805
     locked: 0
   - name: Default
     uniqueID: 0

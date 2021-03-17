@@ -9,8 +9,26 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
+    private PlayerHealth playerHealth;
+
 
     Vector2 movement;
+
+    private void Start()
+    {
+        playerHealth = gameObject.GetComponent<PlayerHealth>();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "projectile")
+        {
+            Destroy(collision.gameObject);
+            playerHealth.DamagePlayer(1);
+        }
+    }
+
+
 
     // Update is called once per frame
     void Update()
