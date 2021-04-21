@@ -15,7 +15,8 @@ public class GameAssets : MonoBehaviour
         }
     }
 
-    public Transform Projectile_Blue;
+    public Transform TRUETeslaShot;
+
     public Transform GameHandler;
 
 }

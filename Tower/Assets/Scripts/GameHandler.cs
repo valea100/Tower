@@ -11,6 +11,8 @@ public class GameHandler : MonoBehaviour
 
     private Vector2 mousePos;
     private int gold;
+    private int price;
+    private Hover hover;
 
     public int Gold
     {
@@ -28,7 +30,8 @@ public class GameHandler : MonoBehaviour
     private void Start()
     {
         Debug.Log("GameHandler.start");
-        Gold = 1000;
+        Gold = 100;
+        hover = GameObject.Find("hover").GetComponent<Hover>();
     }
 
     // Update is called once per frame
@@ -46,7 +49,11 @@ public class GameHandler : MonoBehaviour
                     Vector3 position = new Vector3(x, y, 0);
 
                     Instantiate(ClickedButton.towerPrefab, position, Quaternion.identity);
+                    Gold -= price;
+
+
                     ClickedButton = null;
+                    hover.Deactivate();
                 }
             }
         }
@@ -54,9 +61,12 @@ public class GameHandler : MonoBehaviour
 
     public void PickTower(TowerButton towerButton)
     {
-        
-        ClickedButton = towerButton;
-        
+        if(towerButton.price <= Gold)
+        {
+            ClickedButton = towerButton;
+            hover.Activate(towerButton.Sprite);
+            price = towerButton.price;
+        }     
     }
 
     private bool canSpawnTower(Vector3 position)

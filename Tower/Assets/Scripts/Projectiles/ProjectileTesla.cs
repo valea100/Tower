@@ -24,7 +24,7 @@ public class ProjectileTesla : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hit");
+
         Destroy(gameObject);
 
     }

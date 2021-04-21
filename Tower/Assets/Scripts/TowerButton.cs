@@ -7,9 +7,11 @@ public class TowerButton : MonoBehaviour
 {
     [SerializeField]
     public GameObject towerPrefab;
+    [SerializeField]
+    private Sprite sprite;
+    [SerializeField]
+    public int price;
 
-    public void placeTower()
-    {
 
-    }
+    public Sprite Sprite { get => sprite;}
 }

@@ -23,9 +23,6 @@ public class TeslaTower : MonoBehaviour
     void Start()
     {
         GameObject wave = GameObject.Find("GameHandler");
-        
-        
-
     }
 
     // Update is called once per frame
