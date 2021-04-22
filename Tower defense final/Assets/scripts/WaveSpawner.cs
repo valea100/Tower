@@ -44,7 +44,10 @@ public class WaveSpawner : MonoBehaviour
             {
                 if (index < enemiesWave.Length)
                 {
-                    Instantiate(enemies[enemiesWave[index] - 1]).GetComponent<MoveEnemy>().waypoints = waypoints;
+                    GameObject enemy = enemies[enemiesWave[index] - 1];
+                    enemy.GetComponent<MoveEnemy>().waypoints = waypoints;
+                    enemy.transform.position = waypoints[0].transform.position;
+                    Instantiate(enemy);
                     index++;
 
                 }

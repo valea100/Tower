@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1773787475530118535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.761661, y: -2.1575565, z: 0}
+  m_LocalPosition: {x: -21.16, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 145557291285110360}
@@ -63,8 +63,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505686b717bba934582d68640c79bf69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   speed: 2
+  enemyIndex: 0
 --- !u!212 &998610621832188559
 SpriteRenderer:
   m_ObjectHideFlags: 0
